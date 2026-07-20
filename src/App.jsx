@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header/Header.jsx'
 import './App.css'
 import Section from "./components/Section/Section.jsx";
