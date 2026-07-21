@@ -1,5 +1,5 @@
-div.section__content {
-    background: #81c2d4;
+.section__content {
+    background: var(--accent-bg);
     height: 100vh;
     display: flex;
     justify-content: center;
