@@ -74,10 +74,39 @@
     background-color 180ms ease;
 }
 
+.site-header__links a:not(.site-header__link--active) {
+  background: #ccc;
+  color: #fff;
+}
+
 .site-header__links a:hover,
-.site-header__links a.site-header__link--active {
+.site-header__links a.site-header__link--active.site-header__link--home {
   color: var(--accent);
-  background: var(--accent-bg);
+  background: var(--section-color__home);
+}
+
+.site-header__links a:hover,
+.site-header__links a.site-header__link--active.site-header__link--about {
+  color: var(--accent);
+  background: var(--section-color__about);
+}
+
+.site-header__links a:hover,
+.site-header__links a.site-header__link--active.site-header__link--projects {
+  color: var(--accent);
+  background: var(--section-color__projects);
+}
+
+.site-header__links a:hover,
+.site-header__links a.site-header__link--active.site-header__link--skills {
+  color: var(--accent);
+  background: var(--section-color__skills);
+}
+
+.site-header__links a:hover,
+.site-header__links a.site-header__link--active.site-header__link--contact {
+  color: var(--accent);
+  background: var(--section-color__contact);
 }
 
 .site-header__brand:focus-visible,

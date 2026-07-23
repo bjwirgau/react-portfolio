@@ -5,6 +5,7 @@ const navItems = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Projects', href: '#projects' },
+  { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -13,37 +14,32 @@ function Header() {
 
   useEffect(() => {
     const sectionIds = navItems.map(({ href }) => href.slice(1))
-    const sections = sectionIds
-      .map((sectionId) => document.getElementById(sectionId))
-      .filter(Boolean)
-    const visibility = new Map()
+    const headerOffset = 72
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          visibility.set(entry.target.id, entry.intersectionRatio)
-        })
+    const updateActiveSection = () => {
+      const nextActiveSection = sectionIds.reduce((currentSection, sectionId) => {
+        const sectionElement = document.getElementById(sectionId)
 
-        const mostVisibleSection = sectionIds.reduce((mostVisible, sectionId) => {
-          const mostVisibleRatio = visibility.get(mostVisible) ?? 0
-          const sectionRatio = visibility.get(sectionId) ?? 0
-
-          return sectionRatio > mostVisibleRatio ? sectionId : mostVisible
-        }, sectionIds[0])
-
-        if ((visibility.get(mostVisibleSection) ?? 0) > 0) {
-          setActiveSection(mostVisibleSection)
+        if (!sectionElement) {
+          return currentSection
         }
-      },
-      {
-        rootMargin: '-72px 0px 0px',
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      },
-    )
 
-    sections.forEach((section) => observer.observe(section))
+        const sectionTop = sectionElement.getBoundingClientRect().top
 
-    return () => observer.disconnect()
+        return sectionTop <= headerOffset ? sectionId : currentSection
+      }, sectionIds[0])
+
+      setActiveSection(nextActiveSection)
+    }
+
+    updateActiveSection()
+    window.addEventListener('scroll', updateActiveSection, { passive: true })
+    window.addEventListener('resize', updateActiveSection)
+
+    return () => {
+      window.removeEventListener('scroll', updateActiveSection)
+      window.removeEventListener('resize', updateActiveSection)
+    }
   }, [])
 
   return (
@@ -56,7 +52,7 @@ function Header() {
             return (
               <li key={label}>
                 <a
-                  className={isActive ? 'site-header__link--active' : undefined}
+                  className={isActive ? 'site-header__link--active site-header__link--' + label.toLowerCase() : undefined}
                   href={href}
                   aria-current={isActive ? 'location' : undefined}
                 >
