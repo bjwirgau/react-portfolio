@@ -15,11 +15,11 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  --section-color__home: #ff8d8d;
-  --section-color__about: #8d8dff;
-  --section-color__projects: #8dff8d;
-  --section-color__skills: #fffd8d;
-  --section-color__contact: #ff8dff;
+  --section-color__home: #c3d9ec;
+  --section-color__about: #cdcdf8;
+  --section-color__projects: #e1f6e1;
+  --section-color__skills: #fcfbdc;
+  --section-color__contact: #ffd6ff;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;

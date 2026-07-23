@@ -79,33 +79,53 @@
   color: #fff;
 }
 
-.site-header__links a:hover,
-.site-header__links a.site-header__link--active.site-header__link--home {
-  color: var(--accent);
+.site-header__links li:nth-child(1) a:hover {
+  color: var(--text-h);
   background: var(--section-color__home);
 }
 
-.site-header__links a:hover,
-.site-header__links a.site-header__link--active.site-header__link--about {
-  color: var(--accent);
+.site-header__links li:nth-child(2) a:hover {
+  color: var(--text-h);
   background: var(--section-color__about);
 }
 
-.site-header__links a:hover,
-.site-header__links a.site-header__link--active.site-header__link--projects {
-  color: var(--accent);
+.site-header__links li:nth-child(3) a:hover {
+  color: var(--text-h);
   background: var(--section-color__projects);
 }
 
-.site-header__links a:hover,
-.site-header__links a.site-header__link--active.site-header__link--skills {
-  color: var(--accent);
+.site-header__links li:nth-child(4) a:hover {
+  color: var(--text-h);
   background: var(--section-color__skills);
 }
 
-.site-header__links a:hover,
+.site-header__links li:nth-child(5) a:hover {
+  color: var(--text-h);
+  background: var(--section-color__contact);
+}
+
+.site-header__links a.site-header__link--active.site-header__link--home {
+  color: var(--text-h);
+  background: var(--section-color__home);
+}
+
+.site-header__links a.site-header__link--active.site-header__link--about {
+  color: var(--text-h);
+  background: var(--section-color__about);
+}
+
+.site-header__links a.site-header__link--active.site-header__link--projects {
+  color: var(--text-h);
+  background: var(--section-color__projects);
+}
+
+.site-header__links a.site-header__link--active.site-header__link--skills {
+  color: var(--text-h);
+  background: var(--section-color__skills);
+}
+
 .site-header__links a.site-header__link--active.site-header__link--contact {
-  color: var(--accent);
+  color: var(--text-h);
   background: var(--section-color__contact);
 }
 
