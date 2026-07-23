@@ -7,25 +7,25 @@
     scroll-snap-stop: always;
 }
 
-.section__content--home {
-    background: var(--section-color__home);
-}
+/*.section__content--home {*/
+/*    background: var(--section-color__home);*/
+/*}*/
 
-.section__content--about {
-    background: var(--section-color__about);
-}
+/*.section__content--about {*/
+/*    background: var(--section-color__about);*/
+/*}*/
 
-.section__content--projects {
-    background: var(--section-color__projects);
-}
+/*.section__content--projects {*/
+/*    background: var(--section-color__projects);*/
+/*}*/
 
-.section__content--skills {
-    background: var(--section-color__skills);
-}
+/*.section__content--skills {*/
+/*    background: var(--section-color__skills);*/
+/*}*/
 
-.section__content--contact {
-    background: var(--section-color__contact);
-}
+/*.section__content--contact {*/
+/*    background: var(--section-color__contact);*/
+/*}*/
 
 h2 {
     font-size: 2rem;
