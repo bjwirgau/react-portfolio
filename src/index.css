@@ -60,6 +60,12 @@ body {
   margin: 0;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 72px;
+  scroll-behavior: smooth;
+}
+
 #root {
   /*width: 1126px;*/
   max-width: 100%;
